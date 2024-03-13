@@ -50,7 +50,9 @@ createApp({
     // Aggiungo la todo all'array con push
     addTask() {
       console.log(this.newTodo);
-      this.todos.push(this.newTodo);
+      this.todos.push({...this.newTodo});
+      console.log(this.todos);
+      this.newTodo.text=""
     },
 
     //Cambio il valore booleano dell'oggetto cliccato

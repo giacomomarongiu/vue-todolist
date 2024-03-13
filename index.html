@@ -25,8 +25,8 @@
             <li v-for="(todo,index) in todos">
                 <!-- -- SE oggetto.done==true faccio sì che sia sbarratta
                 aggiungendo la classe completed-->
-                <!--                BONUS 2 -- Modifico il valore booleano del mio oggetto al click sul testo--> <span
-                    @click="doneUndone(index)" :class="{ 'completed': todo.done }"> {{todo.text}} </span>
+                <!--BONUS 2 -- Modifico il valore booleano del mio oggetto al click sul testo-->
+                <span @click="doneUndone(index)" :class="{ 'completed': todo.done }"> {{todo.text}} </span>
                 <!---- Inserisco accanto a ogni testo un'icona-->
                 <!---- Faccio si che @onclick la task si cancelli con la funzione removeTask-->
                 <i class="fa-solid fa-toilet" @click="removeTask(index)"> </i>
