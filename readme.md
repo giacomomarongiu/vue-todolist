@@ -26,3 +26,7 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 -- Inserisco accanto a ogni testo un'icona
 -- Verifico se ho tra le mani l'oggetto giusto
 -- Faccio si che @onclick la task si cancelli
+- Milestone 3:
+-- Aggiungo al mio html una finestra di input e un bottone
+-- Al @click sul bottone il valore in input viene aggiunto assegnato a una variabile
+-- Aggiungo la variabile ai miei oggetti in lista

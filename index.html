@@ -13,6 +13,12 @@
 <body>
     <div id="app">
         <h1>My ToDoList</h1>
+        <!---- Aggiungo al mio html una finestra di input e un bottone-->
+        <!--Utilizzo v-model per assegnare "in diretta" il valore di input alla mia variabile js-->
+        <input v-model="newTodo.text" type="text" placeholder="Write a new task">
+        <!--Al @click sul bottone il valore in input viene aggiunto assegnato a una variabile-->
+        <!-- Aggiungo la variabile ai miei oggetti in lista-->
+        <button @click="addTask">Add Task</button>
         <ul>
             <!---- Stampo nel mio html la mia lista di oggetti con v-for-->
             <li v-for="(todo,index) in todos">
