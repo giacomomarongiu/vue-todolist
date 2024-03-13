@@ -7,6 +7,7 @@
     <title>Vue Todolist</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://kit.fontawesome.com/3a46370e2f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,9 +15,14 @@
         <h1>My ToDoList</h1>
         <ul>
             <!---- Stampo nel mio html la mia lista di oggetti con v-for-->
-            <!-- -- SE oggetto.done==true faccio sì che sia sbarratta
-            aggiungendo la classe completed-->
-            <li v-for="(todo,index) in todos" :class="{ 'completed': todo.done }">{{todo.text}}</li>
+            <li v-for="(todo,index) in todos">
+                <!-- -- SE oggetto.done==true faccio sì che sia sbarratta
+                aggiungendo la classe completed-->
+                <span :class="{ 'completed': todo.done }"> {{todo.text}} </span>
+                <!---- Inserisco accanto a ogni testo un'icona-->
+                <!---- Faccio si che @onclick la task si cancelli con la funzione removeTask-->
+                <i class="fa-solid fa-toilet" @click="removeTask(index)"> </i>
+            </li>
         </ul>
     </div>
 

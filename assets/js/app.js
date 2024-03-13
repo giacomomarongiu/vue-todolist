@@ -31,5 +31,15 @@ createApp({
         }
       ]
     }
+  },
+  methods: {
+    removeTask(taskId){
+      //Verifico se funziona
+      console.log("Remove");
+      //Verifco cosa ho prendendo This
+      console.log(this.todos[taskId]);// Ho l'oggetto che mi interessa
+      //Lo rimuovo dal mio array
+      this.todos.splice(taskId,1)
+    }
   }
 }).mount('#app')

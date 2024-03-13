@@ -22,3 +22,7 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 - Milestone 1:
 -- Stampo nel mio html la mia lista di oggetti con v-for
 -- SE oggetto.done==true faccio sì che sia sbarratta
+- Milestone 2:
+-- Inserisco accanto a ogni testo un'icona
+-- Verifico se ho tra le mani l'oggetto giusto
+-- Faccio si che @onclick la task si cancelli
