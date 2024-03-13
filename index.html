@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
     <div id="app">
-        <h1>Hello Vue</h1>
+        <h1>My ToDoList</h1>
+        <ul>
+            <!---- Stampo nel mio html la mia lista di oggetti con v-for-->
+            <!-- -- SE oggetto.done==true faccio sì che sia sbarratta
+            aggiungendo la classe completed-->
+            <li v-for="(todo,index) in todos" :class="{ 'completed': todo.done }">{{todo.text}}</li>
+        </ul>
     </div>
-    
+
 
     <script src="./assets/js/app.js"></script>
 </body>
+
 </html>
