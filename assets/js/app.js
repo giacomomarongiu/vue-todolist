@@ -48,6 +48,9 @@ createApp({
     },
 
     // Aggiungo la todo all'array con push
+    //This happens because the child component emits the same object reference each time
+    //Non funziona con push(this.newTodo) perché su js l'oggetto figlio ha la stessa "reference" ogni volta
+    //Per questo andrebbe a modificarmi ogni volta gli oggetti aggiunti 
     addTask() {
       console.log(this.newTodo);
       this.todos.push({...this.newTodo});
