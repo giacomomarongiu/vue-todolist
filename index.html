@@ -15,8 +15,8 @@
         <h1>My ToDoList</h1>
         <!---- Aggiungo al mio html una finestra di input e un bottone-->
         <!--Utilizzo v-model per assegnare "in diretta" il valore di input alla mia variabile js-->
-        <!---- BONUS Aggiungo la key .enter al mio input -->
-        <input  @keyup.enter="addTask()" v-model="newTodo.text" type="text" placeholder="Write a new task">
+        <!---- BONUS 1 Aggiungo la key .enter al mio input -->
+        <input @keyup.enter="addTask()" v-model="newTodo.text" type="text" placeholder="Write a new task">
         <!--Al @click sul bottone il valore in input viene aggiunto assegnato a una variabile-->
         <!-- Aggiungo la variabile ai miei oggetti in lista-->
         <button @click="addTask">Add Task</button>
@@ -25,7 +25,8 @@
             <li v-for="(todo,index) in todos">
                 <!-- -- SE oggetto.done==true faccio sì che sia sbarratta
                 aggiungendo la classe completed-->
-                <span :class="{ 'completed': todo.done }"> {{todo.text}} </span>
+                <!--                BONUS 2 -- Modifico il valore booleano del mio oggetto al click sul testo--> <span
+                    @click="doneUndone(index)" :class="{ 'completed': todo.done }"> {{todo.text}} </span>
                 <!---- Inserisco accanto a ogni testo un'icona-->
                 <!---- Faccio si che @onclick la task si cancelli con la funzione removeTask-->
                 <i class="fa-solid fa-toilet" @click="removeTask(index)"> </i>

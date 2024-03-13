@@ -53,5 +53,13 @@ createApp({
       this.todos.push(this.newTodo);
     },
 
+    //Cambio il valore booleano dell'oggetto cliccato
+    doneUndone(taskId) {
+      console.log("Cambia il booleano!");
+      console.log(this.todos[taskId].done);
+      //Gli assegno il valore opposto
+      this.todos[taskId].done=!this.todos[taskId].done;
+    }
+
   }
 }).mount('#app')

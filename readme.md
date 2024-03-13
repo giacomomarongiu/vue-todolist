@@ -32,3 +32,6 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 -- Aggiungo la variabile ai miei oggetti in lista
 - Bonus 1
 -- Aggiungo la key .enter al mio input 
+- Bonus 2
+-- Modifico il valore booleano del mio oggetto al click sul testo
+-- Creo una funzione che ne inverte il valore 
