@@ -30,3 +30,5 @@ Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul p
 -- Aggiungo al mio html una finestra di input e un bottone
 -- Al @click sul bottone il valore in input viene aggiunto assegnato a una variabile
 -- Aggiungo la variabile ai miei oggetti in lista
+- Bonus 1
+-- Aggiungo la key .enter al mio input 

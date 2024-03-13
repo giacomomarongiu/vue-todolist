@@ -15,7 +15,8 @@
         <h1>My ToDoList</h1>
         <!---- Aggiungo al mio html una finestra di input e un bottone-->
         <!--Utilizzo v-model per assegnare "in diretta" il valore di input alla mia variabile js-->
-        <input v-model="newTodo.text" type="text" placeholder="Write a new task">
+        <!---- BONUS Aggiungo la key .enter al mio input -->
+        <input  @keyup.enter="addTask()" v-model="newTodo.text" type="text" placeholder="Write a new task">
         <!--Al @click sul bottone il valore in input viene aggiunto assegnato a una variabile-->
         <!-- Aggiungo la variabile ai miei oggetti in lista-->
         <button @click="addTask">Add Task</button>
