@@ -1,7 +1,5 @@
 console.log("Hello World");
 
-
-
 const { createApp } = Vue
 
 createApp({
@@ -40,9 +38,9 @@ createApp({
     // Rimuovo la todo dall'array con splice
     removeTask(taskId) {
       //Verifico se funziona
-      console.log("Remove");
+      //console.log("Remove");
       //Verifco cosa ho prendendo This
-      console.log(this.todos[taskId]);// Ho l'oggetto che mi interessa
+      //console.log(this.todos[taskId]);// Ho l'oggetto che mi interessa
       //Lo rimuovo dal mio array
       this.todos.splice(taskId, 1)
     },
@@ -52,16 +50,17 @@ createApp({
     //Non funziona con push(this.newTodo) perché su js l'oggetto figlio ha la stessa "reference" ogni volta
     //Per questo andrebbe a modificarmi ogni volta gli oggetti aggiunti 
     addTask() {
-      console.log(this.newTodo);
+      //console.log(this.newTodo);
+      //l'operatore spread passa i valori non per reference ma per value
       this.todos.push({...this.newTodo});
-      console.log(this.todos);
+      //console.log(this.todos);
       this.newTodo.text=""
     },
 
     //Cambio il valore booleano dell'oggetto cliccato
     doneUndone(taskId) {
-      console.log("Cambia il booleano!");
-      console.log(this.todos[taskId].done);
+      //console.log("Cambia il booleano!");
+      //console.log(this.todos[taskId].done);
       //Gli assegno il valore opposto
       this.todos[taskId].done=!this.todos[taskId].done;
     }
